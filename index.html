@@ -607,9 +607,26 @@ eusmod tempor incididunt ut labore et <br> dolore magna aliqua.
 </div>
 
 <!-- map -->
+<script>
+	var map;
+function initMap() {
+var london = {lat: 51.518098, lng: -0.129102};
+map = new google.maps.Map(document.getElementById('map'), {
+center: {lat: 51.518098, lng: -0.129102},
+zoom: 13,
+zoomControl: false,
+scaleControl: false,
+scrollwheel: false,
+disableDoubleClickZoom: true,
+});
+var marker = new google.maps.Marker({
+position: london,
+map: map,
+});};
+</script>
+<script src="js/scripts.min.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJBw4mYWqigMyfWYA_rCX0kqn4NEsp-kQ&callback=initMap"
 type="text/javascript"></script>
-<script src="js/scripts.min.js"></script>
+
 </body>
 </html>
-
